@@ -17,7 +17,7 @@ const NavigationBar = (props: Props) => {
     }
 
     return (
-        <nav className="navbar navbar-expand-sm navbar-dark bg-dark rounded mb-3">
+        <nav className="navbar navbar-expand-sm navbar-dark bg-dark rounded mb-3 sticky-top w-100">
             <div className="container-fluid">
                 <Link className="navbar-brand" to="/pokemons">
                     <img className="cursor-pointer" src="./src/assests/pokeball.png" width="42" height="42" />

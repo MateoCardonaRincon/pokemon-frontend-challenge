@@ -3,7 +3,7 @@ import "./App.css"
 function App() {
     return (
         <div className="App">
-            <h1>Project Initialization</h1>
+            <h1>Project Initialization: Pokedex</h1>
         </div>
     )
 }

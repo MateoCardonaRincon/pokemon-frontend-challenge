@@ -1,10 +1,15 @@
-import "./App.css"
+import { Provider, useSelector } from "react-redux"
+import { BrowserRouter } from "react-router-dom"
+import { store } from "./context/store"
+import AppRouter from "./router/AppRouter"
 
 function App() {
     return (
-        <div className="App">
-            <h1>Project Initialization: Pokedex</h1>
-        </div>
+        <BrowserRouter>
+            <Provider store={store}>
+                <AppRouter />
+            </Provider>
+        </BrowserRouter>
     )
 }
 

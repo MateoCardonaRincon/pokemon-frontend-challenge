@@ -13,7 +13,19 @@ const initialState: pokemonStateType = {
 const pokemonSlice = createSlice({
     name: 'pokemons',
     initialState,
-    reducers: {},
+    reducers: {
+        setPokemonAsFavorite(state, action) {
+            const pokemonToUpdate = action.payload
+            const pokemonSetAsFavorite = { ...pokemonToUpdate, isFavorite: !pokemonToUpdate.isFavorite }
+            const updatedPokemons = state.pokemons.map(pokemon => {
+                if (pokemon.name === pokemonToUpdate.name) {
+                    return pokemonSetAsFavorite
+                }
+                return pokemon
+            })
+            return { ...state, pokemons: updatedPokemons }
+        }
+    },
     extraReducers: (builder) => {
         // Get all pokemons
         builder.addCase(getPokemonList.pending, (state) => {
@@ -32,6 +44,8 @@ const pokemonSlice = createSlice({
 })
 
 export default pokemonSlice.reducer
+
+export const { setPokemonAsFavorite } = pokemonSlice.actions
 
 export const selectPokemonsState = () => (state: RootState) => state.pokemons
 export const selectPokemons = () => (state: RootState) => state.pokemons.pokemons

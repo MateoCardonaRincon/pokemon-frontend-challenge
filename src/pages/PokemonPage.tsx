@@ -8,7 +8,7 @@ const PokemonPage = (props: Props) => {
     const { id } = useParams()
 
     return (
-        <div>PokemonPage --- id: {id}</div>
+        <div>PokemonPage - id: {id}</div>
     )
 }
 

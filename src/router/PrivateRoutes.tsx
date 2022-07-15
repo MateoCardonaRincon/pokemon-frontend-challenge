@@ -17,7 +17,7 @@ const PrivateRoutes: React.FC<Props> = (props) => {
                 <Route path="/pokemons" element={<PokemonListPage />} />
                 <Route path="/search" element={<SearchPage />} />
                 <Route path="/favorites" element={<FavoritesPage />} />
-                <Route path="/pokemon/:id" element={<PokemonPage />} />
+                <Route path="/pokemon/:pokemonName" element={<PokemonPage />} />
                 <Route path="*" element={<LoginPage />} />
             </Routes>
         </>

@@ -12,7 +12,7 @@ const FavoritesPage = (props: Props) => {
     const favoritePokemons = pokemons.filter(pokemon => pokemon.isFavorite)
 
     return (favoritePokemons.length === 0 ?
-        <div className="mt-3"><h4>There are no favorite pokemons yet</h4></div> :
+        <div className="mt-3"><h4>You don't have favorite pokemons</h4></div> :
         <PokemonList pokemons={favoritePokemons} />
     )
 }

@@ -30,7 +30,7 @@ const LoginForm = (props: Props) => {
             <div className="row">
                 <h3>Login</h3>
                 <p className="my-3 fs-5">
-                    Enjoy this Pokedex by loging in with Google
+                    Enjoy this Pokedex by logging in
                 </p>
                 <GoogleAuthButton />
             </div>

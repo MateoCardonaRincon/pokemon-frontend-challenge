@@ -1,4 +1,5 @@
 export type authStateType = {
     logged: boolean,
-    user?: string
+    user?: string,
+    photo?: string
 }

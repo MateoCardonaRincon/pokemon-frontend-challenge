@@ -8,7 +8,7 @@ type Props = {}
 
 const PokemonSearchForm = (props: Props) => {
 
-    var pokemons = useSelector(selectPokemons())
+    const pokemons = useSelector(selectPokemons())
 
     const [pokemonName, setPokemonName] = useState("")
     const [pokemonsFound, setPokemonsFound] = useState<IPokemon[]>([])
@@ -20,7 +20,7 @@ const PokemonSearchForm = (props: Props) => {
             setPokemonsFound(filteredPokemons)
         }
 
-    }, [pokemonName])
+    }, [pokemonName, pokemons])
 
     return (
         <>

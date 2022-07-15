@@ -9,7 +9,11 @@ const authSlice = createSlice({
     initialState,
     reducers: {
         setLogged(state, action) {
-            return { ...state, logged: action.payload.logged, user: action.payload.user }
+            return {
+                ...state, logged: action.payload.logged,
+                user: action.payload.user,
+                photo: action.payload.photo
+            }
         }
     }
 })
@@ -21,3 +25,4 @@ export const { setLogged } = authSlice.actions
 export const selectAuthState = () => (state: RootState) => state.auth
 export const selectAuthLogged = () => (state: RootState) => state.auth.logged
 export const selectAuthUser = () => (state: RootState) => state.auth.user
+export const selectAuthUserPhoto = () => (state: RootState) => state.auth.photo

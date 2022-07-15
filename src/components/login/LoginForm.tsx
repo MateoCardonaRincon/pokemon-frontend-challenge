@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { setLogged } from '../../context/slice/authSlice'
 import { useAppDispatch } from '../../context/store'
 import { getPokemonList } from '../../services/getPokemonList'
+import GoogleAuthButton from './GoogleAuthButton'
 
 type Props = {}
 
@@ -25,20 +26,13 @@ const LoginForm = (props: Props) => {
     }
 
     return (
-        <div className="fluid-container py-3 custom-container">
+        <div className="fluid-container custom-container my-5">
             <div className="row">
                 <h3>Login</h3>
-                <p className="text-start my-3">
-                    Type your name and then click on <b>Go</b> to see all Pokemons
+                <p className="my-3 fs-5">
+                    Enjoy this Pokedex by loging in with Google
                 </p>
-                <div className="col-sm-9 my-2">
-                    <input className="form-control" type="text" placeholder="Name"
-                        value={userName}
-                        onChange={(e) => setUserName(e.target.value)} />
-                </div>
-                <div className="col-sm-3 my-2">
-                    <button className="btn btn-primary w-100" onClick={(e) => onLogin(e)}>Go</button>
-                </div>
+                <GoogleAuthButton />
             </div>
         </div>
     )

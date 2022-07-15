@@ -4,6 +4,8 @@ import { selectAuthLogged, selectAuthUser } from '../context/slice/authSlice'
 import PrivateRoutes from './PrivateRoutes'
 import PublicRoutes from './PublicRoutes'
 import "../App.css"
+import Header from '../components/shared/Header'
+import Footer from '../components/shared/Footer'
 
 type Props = {}
 
@@ -13,7 +15,12 @@ const AppRouter: React.FC<Props> = (props) => {
 
     return (
         <div className="App">
-            {logged ? <PrivateRoutes /> : <PublicRoutes />}
+            {logged ?
+                <>
+                    <Header />
+                    <PrivateRoutes />
+                </> : <PublicRoutes />}
+            <Footer />
         </div>
     )
 }

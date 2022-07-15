@@ -16,8 +16,9 @@ const authSlice = createSlice({
         setLogged(state, action) {
             return {
                 ...state, logged: action.payload.logged,
-                user: action.payload.user,
-                photo: action.payload.photo
+                userEmail: action.payload.userEmail,
+                photo: action.payload.photo,
+                userName: action.payload.userName
             }
         }
     }

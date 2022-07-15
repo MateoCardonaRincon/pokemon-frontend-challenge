@@ -23,7 +23,7 @@ const GoogleAuthButton: React.FC<Props> = (props) => {
 
                 dispatch(setLogged({
                     logged: true,
-                    user: user.displayName?.split(" ")[0],
+                    userName: user.displayName,
                     userEmail: user.email,
                     photo: user.photoURL
                 }))

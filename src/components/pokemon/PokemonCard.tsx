@@ -28,7 +28,7 @@ const PokemonCard: React.FC<Props> = ({ pokemon }) => {
     }
 
     return (
-        <div className="card bg-card animate__animated animate__bounceInDown">
+        <div className="card bg-card animate__animated animate__fadeInLeft">
             <div className="position-relative">
                 <img className='card-img-top'
                     src={pokemon.sprite} />

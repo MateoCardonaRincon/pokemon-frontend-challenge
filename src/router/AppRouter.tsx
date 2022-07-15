@@ -23,11 +23,9 @@ const AppRouter: React.FC<Props> = (props) => {
 
     return (
         <div className="App">
+            <Header />
             {logged ?
-                <>
-                    <Header />
-                    <PrivateRoutes />
-                </> : <PublicRoutes />}
+                <PrivateRoutes /> : <PublicRoutes />}
             <Footer />
         </div>
     )

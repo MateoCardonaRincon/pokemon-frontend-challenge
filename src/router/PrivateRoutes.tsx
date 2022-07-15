@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import NavigationBar from '../components/shared/NavigationBar'
 import FavoritesPage from '../pages/FavoritesPage'
 import LoginPage from '../pages/LoginPage'
@@ -18,7 +18,7 @@ const PrivateRoutes: React.FC<Props> = (props) => {
                 <Route path="/search" element={<SearchPage />} />
                 <Route path="/favorites" element={<FavoritesPage />} />
                 <Route path="/pokemon/:pokemonName" element={<PokemonPage />} />
-                <Route path="*" element={<LoginPage />} />
+                <Route path="*" element={<Navigate to="/pokemons" replace />} />
             </Routes>
         </>
     )

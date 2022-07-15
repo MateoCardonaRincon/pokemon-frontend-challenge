@@ -1,21 +1,6 @@
-:root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-
-  color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #2c2c2c;
   text-decoration: inherit;
 }
 a:hover {
@@ -23,46 +8,40 @@ a:hover {
 }
 
 body {
-  margin: 0;
+  background-image: url("https://images.unsplash.com/photo-1613771404721-1f92d799e49f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80");
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0.6);
+  background-attachment: fixed;
+  background-size: cover;
+  background-blend-mode: overlay;
+  margin-bottom: 50px;
+}
+
+header {
+  background-color: #ffd600;
+  padding-top: 10px;
+  padding-bottom: 10px;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+footer {
+  background-color: rgba(124, 173, 233, 0.3);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 100%;
+  text-align: end;
+  position: fixed;
+  bottom: 0;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.bg-card {
+  background-color: rgb(233, 233, 233);
+  border-radius: 10px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.bg-card-body {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }

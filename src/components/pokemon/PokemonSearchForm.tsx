@@ -15,7 +15,7 @@ const PokemonSearchForm = (props: Props) => {
 
     useEffect(() => {
         setPokemonsFound([])
-        if (pokemonName) {
+        if (pokemonName.trim()) {
             const filteredPokemons = pokemons.filter(pokemon => pokemon.name.toLowerCase().includes(pokemonName.trim().toLowerCase()))
             setPokemonsFound(filteredPokemons)
         }

@@ -10,21 +10,6 @@ type Props = {}
 
 const LoginForm = (props: Props) => {
 
-    const dispatch = useAppDispatch();
-    const navigate = useNavigate();
-
-    const [userName, setUserName] = useState("")
-
-    const onLogin = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-        e.preventDefault()
-        if (userName) {
-            dispatch(setLogged({ logged: true, user: userName }))
-            dispatch(getPokemonList())
-            navigate("/pokemons")
-            setUserName("")
-        }
-    }
-
     return (
         <div className="fluid-container custom-container my-5">
             <div className="row">

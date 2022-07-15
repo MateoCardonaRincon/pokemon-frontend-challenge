@@ -28,9 +28,10 @@ const PokemonCard: React.FC<Props> = ({ pokemon }) => {
     }
 
     return (
-        <div className="card bg-card">
+        <div className="card bg-card animate__animated animate__bounceInDown">
             <div className="position-relative">
-                <img src={pokemon.sprite} className="card-img-top" />
+                <img className='card-img-top'
+                    src={pokemon.sprite} />
                 <div className="position-absolute top-0 end-0 badge">
                     <span className={"border-0 bg-transparent fs-4 " + (pokemon.isFavorite ? "text-warning" : "text-secondary")}
                         role="button" title="Add to favorites"

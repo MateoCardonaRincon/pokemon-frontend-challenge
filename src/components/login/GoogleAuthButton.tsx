@@ -19,18 +19,18 @@ const GoogleAuthButton: React.FC<Props> = (props) => {
 
         signInWithPopup(auth, googleAuthProvider)
             .then((result) => {
-                const credential: OAuthCredential | null = GoogleAuthProvider.credentialFromResult(result);
-
-                const token = credential!.accessToken;
                 const user = result.user;
 
                 dispatch(setLogged({
                     logged: true,
                     user: user.displayName?.split(" ")[0],
+                    userEmail: user.email,
                     photo: user.photoURL
                 }))
                 dispatch(getPokemonList())
-                localStorage.setItem('user', `${user.email}`)
+                localStorage.setItem('email', `${user.email}`)
+                localStorage.setItem('photo', `${user.photoURL}`)
+                localStorage.setItem('name', `${user.displayName}`)
 
                 navigate('/pokemons')
             }).catch((error) => {

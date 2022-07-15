@@ -15,7 +15,10 @@ const NavigationBar = (props: Props) => {
 
     const onLogout = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         e.preventDefault()
-        dispatch(setLogged({ logged: false, user: "Mateo C.R." }))
+        dispatch(setLogged({ logged: false }))
+        localStorage.removeItem('email')
+        localStorage.removeItem('name')
+        localStorage.removeItem('photo')
     }
 
     return (
